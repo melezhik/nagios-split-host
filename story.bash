@@ -1,9 +1,11 @@
+set -e
+
 file=$(config file)
 dest=$(config dest)
 
 echo dest dir: $dest ...
 
-cd $dest
+cd $dest 
 
 awk '
       /^define host/{f=1; str=$0; next} 
